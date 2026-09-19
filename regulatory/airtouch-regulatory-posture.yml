@@ -1,0 +1,29 @@
+generated: '2026-09-19'
+method: probed
+source: harvested from well-known/, security/ and live probes of conventional legal/accessibility paths on en.airtouching.com; no docs site exists
+note: >-
+  No horizontal regulatory signal is published. AirTouch is a radar-chip vendor whose public site
+  is a product catalog, news feed and contact page. Every conventional legal/accessibility path
+  returns the site's 403 HTML shell; there is no security.txt, no trust center, no subprocessor
+  list, no accessibility conformance report, no data-residency or export documentation, and no
+  SBOM. An empty signals map is the measurement, not a gap in the probe.
+signals: {}
+probes:
+- url: https://en.airtouching.com/accessibility
+  status: 403
+- url: https://en.airtouching.com/legal/subprocessors
+  status: 403
+- url: https://en.airtouching.com/legal/dpa
+  status: 403
+- url: https://en.airtouching.com/privacy
+  status: 403
+- url: https://en.airtouching.com/privacy/requests
+  status: 403
+- url: https://en.airtouching.com/transparency
+  status: 403
+- url: https://en.airtouching.com/security
+  status: 403
+- url: https://en.airtouching.com/security/sbom
+  status: 403
+- url: https://en.airtouching.com/.well-known/security.txt
+  status: 404

@@ -1,0 +1,88 @@
+generated: '2026-09-19'
+method: probed
+source: live GET of /.well-known/* on every host the record knows (en.airtouching.com, www.airtouching.com); no API, docs or MCP host exists to probe
+note: >-
+  No well-known document is served. The site's edge answers most non-content paths with a 403
+  carrying a 1,095-byte HTML shell (a WAF/"ce_cust_403" page), and /.well-known/security.txt with
+  a plain 404 ("Sorry, the request URL was not found"). Neither is a document, so no WellKnown or
+  SecurityTxt pointer is emitted — this file records an absence. The bare apex airtouching.com does
+  not answer on 443 and returns 404 on 80. No api./docs./developer./mcp. subdomain resolves in DNS.
+hosts:
+- host: en.airtouching.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+    note: HTML WAF shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+    note: HTML WAF shell, not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+    file: null
+    note: HTML WAF shell, not a document
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+    note: HTML WAF shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+    note: HTML WAF shell, not a document
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+    note: HTML WAF shell, not a document
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+    note: HTML WAF shell, not a document
+  - path: /llms.txt
+    status: 404
+    file: null
+- host: www.airtouching.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+    note: HTML WAF shell, not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+    note: HTML WAF shell, not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+    file: null
+    note: HTML WAF shell, not a document
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+    note: HTML WAF shell, not a document
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+    note: HTML WAF shell, not a document
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+    note: HTML WAF shell, not a document
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+    note: HTML WAF shell, not a document
+  - path: /llms.txt
+    status: 404
+    file: null
+unresolved_hosts:
+- api.airtouching.com
+- docs.airtouching.com
+- developer.airtouching.com
+- dev.airtouching.com
+- mcp.airtouching.com

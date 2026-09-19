@@ -1,7 +1,14 @@
 aid: airtouch
 name: Airtouch
-description: 'Airtouch is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  AirTouch (Shanghai) Intelligent Technology Co., Ltd. (隔空科技) is a Shanghai-based fabless
+  semiconductor company founded in November 2017 that designs microwave and millimeter-wave radar
+  sensor chips — 5.8 GHz, 10.525 GHz, 24 GHz, 60 GHz and 77 GHz series, including SoC parts with an
+  integrated 32-bit MCU and antenna-in-package (AiP) variants — for smart lighting, security,
+  home appliances, smart home and automotive / two-wheeler ADAS. Backed by Intel Capital, Xiaomi,
+  TCL Venture Capital and Fosun, with R&D centers in Ningbo, Guangzhou and Shenzhen. The company
+  sells silicon, modules and reference designs and publishes no public API, SDK, developer portal
+  or machine-readable contract.
 url: https://raw.githubusercontent.com/api-evangelist/airtouch/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +19,15 @@ created: '2026-09-19'
 modified: '2026-09-19'
 tags:
 - Company
+- Semiconductors
+- Radar
+- Sensors
+- Millimeter Wave
+- IoT
+- Smart Home
+- Automotive
+- Hardware
+- China
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +35,49 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/airtouch-domain-security.yml
 - type: Website
+  url: https://en.airtouching.com/
+- type: About
+  url: https://en.airtouching.com/about.html
+- type: Contact
+  url: https://en.airtouching.com/contact.html
+- type: Newsroom
+  url: https://en.airtouching.com/News.html
+- type: Careers
+  url: https://en.airtouching.com/Join.html
+- type: YouTube
+  url: https://www.youtube.com/@%E9%9A%94%E7%A9%BA%E7%A7%91%E6%8A%80AIRTOUCH
+- type: SecondaryMarket
   url: https://equityzen.com/company/airtouch
+x-enrichment:
+  date: '2026-09-19'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    AirTouch (Shanghai) is a fabless radar-sensor chip designer whose entire public surface is a
+    product catalog, news feed and contact page on en.airtouching.com; there is no developer
+    portal, SDK, GitHub organization or contract of any kind, every non-content path (openapi.json,
+    /docs, /api, /graphql, /.well-known/*) returns the edge's 403 HTML shell, and no api./docs./
+    developer./mcp. subdomain resolves.
+  evidence:
+  - url: https://en.airtouching.com/
+    status: 200
+  - url: https://en.airtouching.com/openapi.json
+    status: 403
+  - url: https://en.airtouching.com/docs
+    status: 403
+  - url: https://en.airtouching.com/.well-known/agent-card.json
+    status: 403
+  - url: https://en.airtouching.com/llms.txt
+    status: 404
+  - url: https://en.airtouching.com/.well-known/security.txt
+    status: 404
+  - url: https://api.github.com/orgs/airtouching
+    status: 404
+  checked: '2026-09-19'
